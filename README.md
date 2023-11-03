@@ -6,7 +6,7 @@ Desenvolvimento de um Sistema Empresarial utilizando o acesso a banco de dados, 
 
 ![](assets/img/mockup.png)
 
-O projeto foi implantado na plataforma de subdomínio https://br.000webhost.com/ e está totalmente funcional em produção. Integrado com o banco de dados [PHPMyAdmin](https://www.phpmyadmin.net/), garantindo que todos os dados necessários para o funcionamento do projeto sejam gerenciados de forma eficaz.
+O projeto foi implantado na plataforma de subdomínio [000webhost](https://br.000webhost.com/) e está totalmente funcional em produção. Integrado com o banco de dados [PHPMyAdmin](https://www.phpmyadmin.net/), garantindo que todos os dados necessários para o funcionamento do projeto sejam gerenciados de forma eficaz.
 
 
 
