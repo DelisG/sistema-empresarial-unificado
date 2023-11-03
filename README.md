@@ -4,7 +4,11 @@ Desenvolvimento de um Sistema Empresarial utilizando o acesso a banco de dados, 
 
 ## Projeto em Produção -  [🎬 Visualizar Projeto](https://delisguerra-empresa.000webhostapp.com/)
 
+![](assets/img/mockup.png)
+
 O projeto foi implantado na plataforma de subdomínio https://br.000webhost.com/ e está totalmente funcional em produção. Integrado com o banco de dados [PHPMyAdmin](https://www.phpmyadmin.net/), garantindo que todos os dados necessários para o funcionamento do projeto sejam gerenciados de forma eficaz.
+
+
 
 Para visualizar o projeto em ação, basta clicar no link:  [Visualizar Projeto](https://delisguerra-empresa.000webhostapp.com/)
 
@@ -33,6 +37,19 @@ $dbUsuario = 'usuarioDoMysql'
 $dbSenha 'senhaDoUsuario'
 
 ```
+
+## 📌 Instruções para Importar o Banco de Dados
+
+Para utilizar o projeto, siga estas etapas:
+
+1. Faça o download do arquivo `projeto.sql` no repositório.
+2. Abra seu sistema de gerenciamento de banco de dados (por exemplo, MySQL Workbench).
+3. Crie um novo banco de dados ou selecione um banco de dados existente onde deseja importar os dados.
+4. Importe o arquivo `projeto.sql` no banco de dados:
+   - No MySQL Workbench, vá para "Server" > "Data Import" > "Import from Self-Contained File" e selecione o arquivo `projeto.sql`.
+5. Siga as instruções do seu sistema de gerenciamento de banco de dados para concluir o processo de importação.
+
+Agora você está pronto para usar o projeto com o banco de dados importado.
 
 ## 📌 Código SQL para criação e manipulação dos dados no Banco de dados
 
