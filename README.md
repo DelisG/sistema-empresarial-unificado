@@ -31,7 +31,7 @@ Para visualizar o projeto em ação, basta clicar no link:  [Visualizar Projeto]
 ## 📌 Conexão com Banco de Dados:
 
 ```
-$dbNome = 'nomeDaTable'
+$dbNome = 'dbNome'
 $dbHost = 'nomeDoDominioOuIP:Porta'
 $dbUsuario = 'usuarioDoMysql'
 $dbSenha 'senhaDoUsuario'
@@ -54,10 +54,10 @@ Agora você está pronto para usar o projeto com o banco de dados importado.
 ## 📌 Código SQL para criação e manipulação dos dados no Banco de dados
 
 ### Criando Banco de dados
-- Este código SQL cria um novo banco de dados denominado "Empresa". A ação principal é a criação de um ambiente de armazenamento de dados dedicado, onde informações relacionadas à empresa serão gerenciadas e armazenadas.
+- Este código SQL cria um novo banco de dados denominado "projeto". A ação principal é a criação de um ambiente de armazenamento de dados dedicado, onde informações relacionadas à empresa serão gerenciadas e armazenadas.
 
 ```
-CREATE DATABASE Empresa;
+CREATE DATABASE projeto;
 
 ```
 
