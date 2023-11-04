@@ -51,7 +51,7 @@ Para utilizar o projeto, siga estas etapas:
 
 Agora você está pronto para usar o projeto com o banco de dados importado.
 
-## 📌 Documentação de Lógica de Negócio
+## 📌 Lógica de Negócio
 
 Este documento descreve a lógica de negócio das tabelas `funcao` e `funcionario` de um sistema de gerenciamento de funcionários. As tabelas foram definidas com as seguintes colunas:
 
