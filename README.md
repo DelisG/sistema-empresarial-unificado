@@ -84,7 +84,7 @@ Este documento descreve a lógica de negócio das tabelas `funcao` e `funcionari
 
 - `sobrenome` (varchar(50)): Contém o sobrenome do funcionário.
 
-### **Índices**
+### :black_medium_small_square: **Índices**
 
 As tabelas têm índices definidos da seguinte maneira:
 
@@ -98,15 +98,15 @@ As tabelas têm índices definidos da seguinte maneira:
 
 - Índice `id_funcao`: O campo `id_funcao` possui um índice que se relaciona com o campo `id` da tabela `funcao`.
 
-### :small_yellow_diamond: **Relacionamento**
+### :black_medium_small_square:  **Relacionamento**
 
 Existe um relacionamento entre as tabelas `funcionario` e `funcao` por meio do campo `id_funcao` na tabela `funcionario`. Isso permite associar cada funcionário a uma função específica.
 
-### :small_yellow_diamond: AUTO_INCREMENT
+### :black_medium_small_square:  AUTO_INCREMENT
 
 Os campos `id` nas tabelas `funcao` e `funcionario` são configurados como AUTO_INCREMENT para garantir que cada registro tenha um ID único automaticamente atribuído pelo sistema.
 
-### :small_yellow_diamond: **Restrições de Integridade**
+### :black_medium_small_square:  **Restrições de Integridade**
 
 Foi definida uma restrição de integridade referencial (FOREIGN KEY) no campo `id_funcao` da tabela `funcionario`, referenciando o campo `id` da tabela `funcao`. Isso garante que cada valor de `id_funcao` em `funcionario` esteja relacionado a uma função existente em `funcao`.
 
