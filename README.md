@@ -51,130 +51,70 @@ Para utilizar o projeto, siga estas etapas:
 
 Agora você está pronto para usar o projeto com o banco de dados importado.
 
-## 📌 Código SQL para criação e manipulação dos dados no Banco de dados
+## 📌 Documentação de Lógica de Negócio
 
-### Criando Banco de dados
-- Este código SQL cria um novo banco de dados denominado "projeto". A ação principal é a criação de um ambiente de armazenamento de dados dedicado, onde informações relacionadas à empresa serão gerenciadas e armazenadas.
+Este documento descreve a lógica de negócio das tabelas `funcao` e `funcionario` de um sistema de gerenciamento de funcionários. As tabelas foram definidas com as seguintes colunas:
 
-```
-CREATE DATABASE projeto;
+### Tabela `funcao`
 
-```
+- `setor` (varchar(15)): Representa o setor em que a função está associada.
 
-### Criando Tabela Funcionarios
-- Este código SQL cria uma tabela chamada "funcionarios" com colunas para armazenar informações sobre funcionários, incluindo identificação (Chave Primária), nome, sobrenome, cargo, data de nascimento e salário.
+- `salario` (float): Representa o salário associado à função.
 
-```
-CREATE TABLE `funcionarios` (
-  `id` int(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-  `nome` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `sobrenome` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `cargo` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `data_nascimento` date NOT NULL,
-  `salario` decimal(10, 2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-```
+- `descricao` (varchar(20)): Descreve a função em poucas palavras.
 
-### Inserindo valores na tabela Funcionarios
-- Este código SQL realiza a inserção de registros na tabela 'funcionarios' em um banco de dados. Ele insere informações de quatro funcionários, incluindo seus nomes, sobrenomes, salários, datas de nascimento e cargos.
-  
-```
-  INSERT INTO `funcionarios` (`nome`, `sobrenome`, `salario`, `data_nascimento`, `cargo`) VALUES
-('João', 'Silva', 3500.50, '1990-05-15', 'Analista'),
-('Maria', 'Pereira', 2800.75, '1985-12-10', 'Gerente'),
-('Carlos', 'Santos', 4200.00, '1992-08-20', 'Programador'),
-('Ana', 'Oliveira', 3100.25, '1988-07-05', 'Designer');
-```
+- `id` (int(11)): É a chave primária da tabela, identificando exclusivamente cada função.
 
-### Criando Tabela Cargos
-- Este código SQL cria uma tabela chamada "cargos" em um banco de dados. A tabela possui duas colunas: "id" que é uma chave primária auto-incremento e "descricao" que armazena texto de até 50 caracteres.
-```
-CREATE TABLE cargos (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  descricao VARCHAR(50) NOT NULL
-);
-```
+### Tabela `funcionario`
 
-### Inserindo valores na tabela Cargos
-- Este código SQL executa uma inserção de dados na tabela chamada "cargos". Ele insere cinco registros na tabela, onde cada registro representa um cargo
+- `endereco` (varchar(55)): Representa o endereço do funcionário.
 
-```
-INSERT INTO cargos (descricao) VALUES
-('Gerente'),
-('Analista de Sistemas'),
-('Programador'),
-('Designer'),
-('Atendente');
-```
+- `email` (varchar(20)): Armazena o endereço de e-mail do funcionário.
 
-### Listando todos os Cargos
-- Consulta na tabela "cargos" para exibir todos os registros, ordenados em ordem decrescente com base na coluna "id".
+- `data_nasc` (date): Contém a data de nascimento do funcionário.
 
-```
-SELECT * FROM cargos ORDER BY id DESC;
-```
+- `telefone` (int(11)): Armazena o número de telefone do funcionário.
 
-### Listando todos os Funcionarios
-- Consulta na tabela "funcionarios" para exibir todos os registros, ordenados em ordem decrescente com base na coluna "id".
-  
-```
-SELECT * FROM funcionarios ORDER BY id DESC;
-```
+- `id` (int(11)): É a chave primária da tabela, identificando exclusivamente cada funcionário.
 
-### Adição de Cargos
--  Inserindo novo registro na tabela "cargos", o único campo sendo preenchido é "descricao," que recebe um valor especificado posteriormente, representado pelo marcador '?'
+- `cpf` (int(11)): Contém o número de CPF do funcionário.
 
-```
-INSERT INTO cargos (descricao) VALUES(?);
-```
+- `id_funcao` (int(11)): É uma chave estrangeira que se relaciona com a tabela `funcao` por meio do campo `id`. Indica a função associada ao funcionário.
 
-### Adição de Funcionarios
--  Inserindo novo registro na tabela "funcionarios", os campos sendo preenchidos são "nome, sobrenome, data_nascimento, salario e cargo" que recebem um valor especificado posteriormente, representado pelo marcador '?'
-  
-```
-INSERT INTO funcionarios (nome, sobrenome, data_nascimento, salario, cargo) VALUES(?,?,?,?,?);
-```
+- `nome` (varchar(50)): Armazena o nome do funcionário.
 
-### Consulta de Cargo
-- Consulta na tabela "cargos" para buscar todas as colunas de um registro onde o ID corresponde a um valor específico fornecido como parâmetro.
+- `sobrenome` (varchar(50)): Contém o sobrenome do funcionário.
 
-```
- SELECT * FROM cargos where id = ?;
-```
+### Índices
 
-### Consulta de Funcionario
-- Consulta na tabela "funcionarios" para buscar todas as colunas de um registro onde o ID corresponde a um valor específico fornecido como parâmetro.
+As tabelas têm índices definidos da seguinte maneira:
 
-```
- SELECT * FROM funcionarios where id = ?;
-```
+#### Tabela `funcao`
 
-### Atualização de Cargo
--  Alterando valor na tabela "cargos" e campo "descricao" para um novo valor. A condição para essa atualização é que o campo "id" na tabela "cargos" corresponda ao valor fornecido como parâmetro.
+- Chave primária: O campo `id` é a chave primária da tabela `funcao`.
 
-```
- UPDATE cargos  set descricao = ?  WHERE id = ?;
-```
+#### Tabela `funcionario`
 
-### Atualização de Funcionario
--   Os campos a serem atualizados são nome, sobrenome, salário, data de nascimento e cargo. A atualização é aplicada a na tabela "funcionários" ao funcionário com ID corresponde ao valor fornecido como parâmetro.
+- Chave primária: O campo `id` é a chave primária da tabela `funcionario`.
 
-```
-UPDATE funcionarios  set nome = ?, sobrenome = ?, salario = ?, data_nascimento = ?, cargo = ? WHERE id = ?;
-```
+- Índice `id_funcao`: O campo `id_funcao` possui um índice que se relaciona com o campo `id` da tabela `funcao`.
 
-### Exclusão de Cargo
-- Exclusão de um registro na tabela "cargos" com base em um critério específico, no caso, o ID fornecido como parâmetro.
+### Relacionamento
 
-```
- DELETE FROM cargos where id = ?;
-```
+Existe um relacionamento entre as tabelas `funcionario` e `funcao` por meio do campo `id_funcao` na tabela `funcionario`. Isso permite associar cada funcionário a uma função específica.
 
-### Exclusão de Funcionario
-- Exclusão de um registro na tabela "funcionarios" com base no ID fornecido como parâmetro.
+### AUTO_INCREMENT
 
-```
- DELETE FROM funcionarios where id = ?;
-```
+Os campos `id` nas tabelas `funcao` e `funcionario` são configurados como AUTO_INCREMENT para garantir que cada registro tenha um ID único automaticamente atribuído pelo sistema.
 
-:tada: Agradecemos por visitar e explorar o nosso projeto! Se tiver alguma dúvida ou feedback, não hesite em entrar em contato: **delisgmarques@gmail.com**.
+### Restrições de Integridade
+
+Foi definida uma restrição de integridade referencial (FOREIGN KEY) no campo `id_funcao` da tabela `funcionario`, referenciando o campo `id` da tabela `funcao`. Isso garante que cada valor de `id_funcao` em `funcionario` esteja relacionado a uma função existente em `funcao`.
+
+Isso conclui a descrição da lógica de negócio das tabelas `funcao` e `funcionario`. Essas tabelas são fundamentais para o gerenciamento de funcionários e suas respectivas funções.
+
+
+:tada: Agradecemos por visitar e explorar o nosso projeto! Se tiver alguma dúvida ou feedback, não hesite em entrar em contato:
+
+- Email: **delisgmarques@gmail.com**
+
