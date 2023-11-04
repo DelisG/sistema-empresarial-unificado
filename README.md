@@ -54,7 +54,7 @@ Agora você está pronto para usar o projeto com o banco de dados importado.
 
 Este documento descreve a lógica de negócio das tabelas `funcao` e `funcionario` de um sistema de gerenciamento de funcionários. As tabelas foram definidas com as seguintes colunas:
 
-### Tabela `funcao`
+#### Tabela `funcao`
 
 - `setor` (varchar(15)): Representa o setor em que a função está associada.
 
@@ -64,7 +64,7 @@ Este documento descreve a lógica de negócio das tabelas `funcao` e `funcionari
 
 - `id` (int(11)): É a chave primária da tabela, identificando exclusivamente cada função.
 
-### Tabela `funcionario`
+#### Tabela `funcionario`
 
 - `endereco` (varchar(55)): Representa o endereço do funcionário.
 
@@ -84,7 +84,7 @@ Este documento descreve a lógica de negócio das tabelas `funcao` e `funcionari
 
 - `sobrenome` (varchar(50)): Contém o sobrenome do funcionário.
 
-### Índices
+### :large_orange_diamond: **Índices**
 
 As tabelas têm índices definidos da seguinte maneira:
 
@@ -92,21 +92,21 @@ As tabelas têm índices definidos da seguinte maneira:
 
 - Chave primária: O campo `id` é a chave primária da tabela `funcao`.
 
-#### Tabela `funcionario`
+#### :large_orange_diamond: Tabela `funcionario`
 
 - Chave primária: O campo `id` é a chave primária da tabela `funcionario`.
 
 - Índice `id_funcao`: O campo `id_funcao` possui um índice que se relaciona com o campo `id` da tabela `funcao`.
 
-### Relacionamento
+### :large_orange_diamond: **Relacionamento**
 
 Existe um relacionamento entre as tabelas `funcionario` e `funcao` por meio do campo `id_funcao` na tabela `funcionario`. Isso permite associar cada funcionário a uma função específica.
 
-### AUTO_INCREMENT
+### :large_orange_diamond: AUTO_INCREMENT
 
 Os campos `id` nas tabelas `funcao` e `funcionario` são configurados como AUTO_INCREMENT para garantir que cada registro tenha um ID único automaticamente atribuído pelo sistema.
 
-### Restrições de Integridade
+### :large_orange_diamond: **Restrições de Integridade**
 
 Foi definida uma restrição de integridade referencial (FOREIGN KEY) no campo `id_funcao` da tabela `funcionario`, referenciando o campo `id` da tabela `funcao`. Isso garante que cada valor de `id_funcao` em `funcionario` esteja relacionado a uma função existente em `funcao`.
 
