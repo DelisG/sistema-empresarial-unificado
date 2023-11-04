@@ -29,7 +29,7 @@
             <div class="col-md-4 bg-light d-flex align-items-center justify-content-center p-0">
                 <div class="row">                    
                 
-                    <div class="col-sm-6 text-center">
+                    <div class="col-md-6 my-4 text-center">
                         <a href="read-funcionario.php">
                             <p class="text-dark"><i class="fa-solid fa-list-ul fa-4x"></i></p>
                             <p class="text-dark">Listar Funcionários</p>
@@ -37,21 +37,21 @@
                     </div>  
                     
         
-                    <div class="col-sm-6 text-center">
+                    <div class="col-md-6 my-4 text-center">
                         <a href="create-funcionario.php">
                             <p class="text-dark"><i class="fa-solid fa-user-plus fa-4x"></i></p>
                             <p class="text-dark">Adicionar Funcionário</p>
                         </a>
                     </div>
         
-                    <div class="col-sm-6 text-center">
+                    <div class="col-md-6 my-4 text-center">
                         <a href="cargos.php">
                             <p class="text-dark"><i class="fa-solid fa-file-lines fa-4x"></i></p>
                             <p class="text-dark">Listar Cargos</p>
                         </a>
                     </div>
         
-                    <div class="col-sm-6 text-center">
+                    <div class="col-md-6 my-4 text-center">
                         <a href="create-cargo.php">
                             <p class="text-dark"><i class="fa-solid fa-file-circle-plus fa-4x"></i></p>
                             <p class="text-dark">Adicionar Cargo</p>
