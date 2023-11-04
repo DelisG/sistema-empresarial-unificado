@@ -37,7 +37,6 @@ $dbUsuario = 'usuarioDoMysql'
 $dbSenha 'senhaDoUsuario'
 
 ```
-
 ## 📌 Instruções para Importar o Banco de Dados
 
 Para utilizar o projeto, siga estas etapas:
