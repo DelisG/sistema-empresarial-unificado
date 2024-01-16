@@ -76,7 +76,7 @@ if (!empty($_POST)) {
 <body>
     <div class="container-fluid h-100">
         <div class="row h-100">
-            <div class="col-lg-2 bg-dark">    
+            <div class="col-lg-3 col-md-4 bg-dark">    
                 <a href="index.php"><h5 class="text-light text-center py-4">Sistema Empresarial Unificado</h5></a>
                 <div class="d-flex flex-column my-3">
                     <a href="index.php" class="mb-3 btn btn-dark text-left"><i class="fa-solid fa-house-chimney mr-2"></i>Inicio</a>
