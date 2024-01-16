@@ -26,10 +26,10 @@
                             </a>
 
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Listar Funcionários</a></li>
-                                <li><a class="dropdown-item" href="#">Adicionar Funcionário</a></li>
-                                <li><a class="dropdown-item" href="#">Listar Cargos</a></li>
-                                <li><a class="dropdown-item" href="#">Adicionar Cargo</a></li>
+                                <li><a class="dropdown-item" href="funcionarios.php">Listar Funcionários</a></li>
+                                <li><a class="dropdown-item" href="create-funcionario.php">Adicionar Funcionário</a></li>
+                                <li><a class="dropdown-item" href="cargos.php">Listar Cargos</a></li>
+                                <li><a class="dropdown-item" href="create-cargo.php">Adicionar Cargo</a></li>
                             </ul>
                         </div>
                        
