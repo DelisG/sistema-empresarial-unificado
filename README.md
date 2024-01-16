@@ -21,13 +21,6 @@ Para visualizar o projeto em ação, basta clicar no link:  [Visualizar Projeto]
 - CSS
 - BOOTSTRAP
 
-## 📌 Assuntos Abordados no Desenvolvimento do Projeto:
-
-- Acesso a banco de dados com o MySql
-- Otimização da conexão com o banco de dados através do PDO (PHP Data Object)
-- Uso de tecnologias, como: JavaScript e CSS
-- Uso do framework Bootstrap para realização de um layout responsivo para o projeto.
-
 ## 📌 Conexão com Banco de Dados:
 
 ```
